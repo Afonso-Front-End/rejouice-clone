@@ -6,51 +6,94 @@ gsap.registerPlugin(ScrollTrigger, SplitText)
 
 import "./header.css"
 import video from "../../video/658ef98d531ac2845a270509_RJ-2-0-Videobackground_compressed.mp4"
-import { useEffect } from "react"
-import { useLayoutEffect } from "react"
+import { useGSAP } from "@gsap/react"
 const Header = () => {
-    useLayoutEffect(() => {
-        var timeline = gsap.timeline();
+    useGSAP(() => {
+        const contexto = gsap.context(() => {
+            const rejouice = new SplitText("#header-logo span", {type: "chars"})
+            const rejouiceChars = rejouice.chars
 
-        // timeline.from(".overlay h3", {
-        //     xPercent: 40,
-        //     // opacity: 0,
-        //     duration: 1,
-        //     stagger: 0.1,
-        // });
-        // timeline.to(".overlay h3", {
-        //     xPercent: -10,
-        //     opacity: 0,
-        //     stagger: 0.3,
-        // });
-        timeline.fromTo("#overlay h3",
-            { opacity: 0, x: 40, duration: 1, stagger: 0.1 },
-            { opacity: 0, x: -10, duration: 1, stagger: 0.1, delay: 1 })
+            const rejouiceR = new SplitText("#r", {type: "chars"})
+            const rejouiceRChars = rejouiceR.chars
 
-        // Cleanup function to kill the timeline when component unmounts
+            var timeline = gsap.timeline();
+            timeline.from("#overlay span", {
+                xPercent: 50,
+                delay: 1,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.05
+            })
+            timeline.to("#overlay span", {
+                xPercent: -10,
+                duration: 0.3,
+                stagger: 0.1,
+                opacity: 0
+            })
+            timeline.from("#header-a", {
+                xPercent: 40,
+                opacity: 0,
+                stagger: 0.05,
+                duration: 1,
+            })
+
+            timeline.from(rejouiceChars, {
+                yPercent: 250,
+                duration: 1,
+                stagger: 0.05,
+                delay: -0.5
+            })
+            
+            timeline.to("#overlay", {
+                opacity: 0,
+                ease: "none",
+                delay: -1
+            })
+
+           timeline.from(rejouiceRChars,{
+                yPercent: -250,
+                duration: 1,
+                stagger: 0.05,
+                delay: -1.2
+            })
+            
+
+        })
         return () => {
-            timeline.kill();
+            contexto.revert()
         };
     }, []);
     return (
         <div className="header-video">
+            <div id="overlay">
+                <span>Tomorrow’</span>
+                <span>Brands,</span>
+                <span>Today™</span>
+            </div>
             <video src={video} autoPlay muted loop playsInline></video>
             <header>
                 <nav>
-                    <a>The Venture Agency.</a>
-                    <a>Menu</a>
+                    <div className="te">
+                        <a id="header-a">The</a>
+                        <a id="header-a">Venture</a>
+                        <a id="header-a">Agency.</a>
+                    </div>
+                    <a >Menu</a>
                 </nav>
                 <div id="header-logo">
-                    <h1>rejouice</h1>
+                    <h1 id="rejouice">
+                        <span>r</span>
+                        <span>e</span>
+                        <p id="r">r</p>
+                        <span>o</span>
+                        <span>u</span>
+                        <span>i</span>
+                        <span>c</span>
+                        <span>e</span>
+                    </h1>
                 </div>
             </header>
-            <div id="overlay">
-                <h3>Tomorrow’</h3>
-                <h3>Brands,</h3>
-                <h3>Today™</h3>
-                <div className="over">
-                </div>
-            </div>
+
         </div>
     )
 }

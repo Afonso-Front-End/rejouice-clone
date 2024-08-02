@@ -30,22 +30,38 @@ header>nav a {
     font-weight: 500;
 }
 
+.te {
+    display: flex;
+    gap: 5px;
+    position: relative;
+    z-index: 999;
+}
+
 #header-logo {
-    background-color: yellowgreen;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 
 #header-logo h1 {
     font-family: "Rejouice-Headline";
     position: absolute;
     bottom: 4%;
     font-size: 26.7vw;
-    line-height: 16.1vw;
+    line-height: 15.2vw;
     overflow: hidden;
     font-weight: 100;
+    display: flex;
+    align-items: center;
+    text-transform: lowercase;
 }
+
+#header-logo h1 p{
+    transform: rotate(-180deg); /* Rotaciona o terceiro caractere */
+}
+
+
 
 #overlay {
     width: 100%;
@@ -57,11 +73,11 @@ header>nav a {
     align-items: center;
     justify-content: center;
     font-weight: 100;
-    gap: 10px;
+    gap: 5px;
     z-index: 999;
 }
 
-#overlay h3 {
+#overlay span {
     font-family: "NBInternationalProBoo";
     color: #FFFCF1;
     font-size: 1.8vw;

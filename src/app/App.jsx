@@ -1,5 +1,6 @@
 import Header from "../components/header/Header";
 import Main from "../components/main/Main";
+import Footer from "../components/footer/Footer";
 import "./app.css"
 import gsap from "gsap"
 import ScrollTrigger from "gsap-trial/ScrollTrigger"
@@ -23,6 +24,7 @@ const App = () => {
             <div id="content">
                 <Header/>
                 <Main/>
+                <Footer/>
             </div>
         </div>
     )

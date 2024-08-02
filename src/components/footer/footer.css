@@ -6,7 +6,7 @@
 
 .content-footer {
     height: 100vh;
-    background-color: #0D0D0D;
+    background-color: #0E0E0E;
 }
 
 footer {
@@ -39,7 +39,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1rem 2.4rem 0;
+    padding: 2.5rem 3.5rem 0;
 }
 
 .nav-footer {
@@ -58,15 +58,18 @@ footer {
 }
 
 .nav-text button {
-    padding: 1rem;
+    padding: 1rem ;
     border-radius: 30px;
-    background-color: #D53005;
+    background-color: transparent;
     color: #FFF;
     font-size: 1.2vw;
     border: none;
     letter-spacing: 0.5px;
     transition: 400ms ease-in-out;
     cursor: pointer;
+    border: 1px solid #FFF;
+    width: 170px;
+    font-weight: 100;
 }
 
 .nav-text button:hover {

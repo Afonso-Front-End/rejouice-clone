@@ -1,4 +1,5 @@
 import "./main.css"
+import "./style.css"
 import video1 from "../../video/Website-homepage-Work-01_1.mp4"
 import video2 from "../../video/Website-homepage-Work-02_1.mp4"
 import video3 from "../../video/Website-homepage-Work-03_1.mp4"
@@ -19,25 +20,40 @@ import image_slider_3 from "../../assets/slider/d3289122-3f25-43f3-b140-11a342a4
 import image_slider_4 from "../../assets/slider/8059f4af-8ba3-4e5f-a14b-ba5ed760963f_Mask+group+(39).avif"
 import image_slider_5 from "../../assets/slider/57ac2830-96e7-4174-a104-b384126bf98c_fec955552eb681ff6c273774515e6c2e.avif"
 
+import useScroolTringer from "../../hook/useScroolTringer"
+
 const Main = () => {
+    useScroolTringer()
     return (
         <div className="container-main">
             <main className="content-main">
 
-                <div className="container-section">
+                <div className="container-section" >
                     <div className="content-section">
                         <div className="section-span-1">
-                            <span>Tomorrow’s Brands, Today™</span>
-                            <span>Paris / San Diego</span>
-                        </div>
-                        <div className="section-span-2">
                             <span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We
-                                are a venture firm and digital agency. Our mission
-                                is to transform founders' visions into remarkable
-                                brands. Choose traditional compensation or an equity
-                                offset through our Venture Model — your vision, your
-                                decision.
+                                <p>Tomorrow’s Brands, Today™</p>
+                            </span>
+                            <span>
+                                <p>Paris / San Diego</p>
+                            </span>
+                        </div>
+                        <div className="section-span-2" id="season-2">
+                            <span>
+                                <p>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We
+                                    are a venture firm and digital agency. Our
+                                </p>
+                            </span>
+                            <span>
+                                <p>mission is to transform founders' visions into</p>
+                            </span>
+                            <span>
+                                <p>remarkable brands. Choose traditional compensation or an equity offset through our</p>
+                            </span>
+                            <span>
+                                <p>Venture Model — your vision, your
+                                decision.</p>
                             </span>
                         </div>
                     </div>
@@ -62,9 +78,9 @@ const Main = () => {
                                 <a href="#">↵ See the work</a>
                             </div>
                             <div className="content-card-video">
-                                <div className="card-video-1 card-video"><video src={video1} autoPlay></video><img src={video1Img} alt="" /><span className="title-img"><img src={logoCardRivia} alt="" id="revian" /></span></div>
+                                {/* <div className="card-video-1 card-video"><video src={video1} autoPlay></video><img src={video1Img} alt="" /><span className="title-img"><img src={logoCardRivia} alt="" id="revian" /></span></div>
                                 <div className="card-video-2 card-video"><video src={video2} autoPlay></video><img src={video2Img} alt="" /><span className="title-img"><img src={logoCardOura} alt="" /></span></div>
-                                <div className="card-video-3 card-video"><video src={video3} autoPlay></video><img src={video3Img} alt="" /><span className="title-img"><img src={logoCardMoxion} alt="" /></span></div>
+                                <div className="card-video-3 card-video"><video src={video3} autoPlay></video><img src={video3Img} alt="" /><span className="title-img"><img src={logoCardMoxion} alt="" /></span></div> */}
                             </div>
                         </div>
                     </div>

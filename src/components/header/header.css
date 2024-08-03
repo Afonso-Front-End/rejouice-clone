@@ -85,7 +85,7 @@ header>nav a {
 }
 
 #play-reel {
-    position: absolute;
+    position: fixed;
     width: 100px;
     height: 100px;
     background-color: #CA3F1E;
@@ -100,4 +100,5 @@ header>nav a {
     pointer-events: none;
     transform: translate(-50%, -50%);       
     z-index: 1;
+    
 }

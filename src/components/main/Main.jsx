@@ -43,7 +43,7 @@ const Main = () => {
                     </div>
                 </div>
 
-                <div className="container-section">
+                <div className="container-section season-two">
                     <div className="content-section">
                         <div className="section-p">
                             <p><span>Agency & Venture</span><button className="moedels">Models</button><span className="rotate">↵</span></p>

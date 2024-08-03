@@ -8,12 +8,13 @@ import "./header.css"
 import video from "../../video/658ef98d531ac2845a270509_RJ-2-0-Videobackground_compressed.mp4"
 import { useGSAP } from "@gsap/react"
 const Header = () => {
+
     useGSAP(() => {
         const contexto = gsap.context(() => {
-            const rejouice = new SplitText("#header-logo span", {type: "chars"})
+            const rejouice = new SplitText("#header-logo span", { type: "chars" })
             const rejouiceChars = rejouice.chars
 
-            const rejouiceR = new SplitText("#r", {type: "chars"})
+            const rejouiceR = new SplitText("#r", { type: "chars" })
             const rejouiceRChars = rejouiceR.chars
 
             var timeline = gsap.timeline();
@@ -43,21 +44,19 @@ const Header = () => {
                 stagger: 0.05,
                 delay: -0.5
             })
-            
+
             timeline.to("#overlay", {
                 opacity: 0,
                 ease: "none",
                 delay: -1
             })
 
-           timeline.from(rejouiceRChars,{
+            timeline.from(rejouiceRChars, {
                 yPercent: -250,
                 duration: 1,
                 stagger: 0.05,
                 delay: -1.2
             })
-            
-
         })
         return () => {
             contexto.revert()

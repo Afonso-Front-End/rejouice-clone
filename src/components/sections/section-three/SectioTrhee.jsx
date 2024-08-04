@@ -18,15 +18,15 @@ const SectioTrhee = () => {
     const videoRef2 = useRef(null);
     const videoRef3 = useRef(null);
 
-    const handleMouseEnter = () => {
-        videoRef1.current.play()
-        videoRef2.current.play()
-        videoRef3.current.play()
-        videoRef1.current.currentTime = 0
-        videoRef2.current.currentTime = 0
-        videoRef3.current.currentTime = 0
+    const handleMouseEnter = (video) => {
+
+        if (video) {
+            video.current.play()
+            video.current.currentTime = 0
+
+        }
     };
-    
+
     const handleMouseLeave = () => {
         videoRef1.current.pause()
         videoRef2.current.pause()
@@ -45,21 +45,21 @@ const SectioTrhee = () => {
                     </div>
 
                     <div className="content-card-video">
-                        <div className="card-video-1 card-video" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                        <div className="card-video-1 card-video" onMouseEnter={() => handleMouseEnter(videoRef1)} onMouseLeave={handleMouseLeave}>
                             <video src={video1} loop muted ref={videoRef1}></video>
                             <img src={video1Img} alt="" />
                             <span>
                                 <img src={logoCardRivia} alt="" />
                             </span>
                         </div>
-                        <div className="card-video-2 card-video" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                        <div className="card-video-2 card-video" onMouseEnter={() => handleMouseEnter(videoRef2)} onMouseLeave={handleMouseLeave}>
                             <video src={video2} loop muted ref={videoRef2}></video>
                             <img src={video2Img} alt="" />
                             <span>
                                 <img src={logoCardOura} alt="" />
                             </span>
                         </div>
-                        <div className="card-video-3 card-video" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                        <div className="card-video-3 card-video" onMouseEnter={() => handleMouseEnter(videoRef3)} onMouseLeave={handleMouseLeave}>
                             <video src={video3} loop muted ref={videoRef3}></video>
                             <img src={video3Img} alt="" />
                             <span>

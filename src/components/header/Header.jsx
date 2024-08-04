@@ -5,8 +5,9 @@ import SplitText from "gsap-trial/SplitText"
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 import "./header.css"
-import video from "../../video/658ef98d531ac2845a270509_RJ-2-0-Videobackground_compressed.mp4"
+import video from "./video/658ef98d531ac2845a270509_RJ-2-0-Videobackground_compressed.mp4"
 import { useGSAP } from "@gsap/react"
+
 const Header = () => {
 
     useGSAP(() => {
@@ -31,31 +32,28 @@ const Header = () => {
                 stagger: 0.1,
                 opacity: 0
             })
-            timeline.from("#header-a", {
+            timeline.from(".text-header-a a", {
                 xPercent: 40,
                 opacity: 0,
                 stagger: 0.05,
                 duration: 1,
             })
-
             timeline.from(rejouiceChars, {
                 yPercent: 250,
                 duration: 1,
                 stagger: 0.05,
-                delay: -0.5
+                delay: -1.5
             })
-
             timeline.to("#overlay", {
                 opacity: 0,
                 ease: "none",
                 delay: -1
             })
-
             timeline.from(rejouiceRChars, {
                 yPercent: -250,
                 duration: 1,
                 stagger: 0.05,
-                delay: -1.2
+                delay: -1.4
             })
         })
         return () => {
@@ -72,7 +70,7 @@ const Header = () => {
             <video src={video} autoPlay muted loop playsInline></video>
             <header>
                 <nav>
-                    <div className="te">
+                    <div className="text-header-a">
                         <a id="header-a">The</a>
                         <a id="header-a">Venture</a>
                         <a id="header-a">Agency.</a>

@@ -30,11 +30,11 @@ header>nav a {
     font-weight: 500;
 }
 
-.te {
+.text-header-a {
     display: flex;
     gap: 5px;
     position: relative;
-
+    z-index: 999;
 }
 
 #header-logo {
@@ -43,7 +43,6 @@ header>nav a {
     justify-content: center;
 
 }
-
 
 #header-logo h1 {
     font-family: "Rejouice-Headline";
@@ -58,8 +57,8 @@ header>nav a {
     text-transform: lowercase;
 }
 
-#header-logo h1 p{
-    transform: rotate(-180deg); /* Rotaciona o terceiro caractere */
+#header-logo h1 p {
+    transform: rotate(-180deg);
 }
 
 
@@ -82,23 +81,4 @@ header>nav a {
     font-family: "NBInternationalProBoo";
     color: #FFFCF1;
     font-size: 1.8vw;
-}
-
-#play-reel {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    background-color: #CA3F1E;
-    border-radius: 100%;
-    /* mix-blend-mode: difference; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "NBInternationalProBoo";
-    color: #FFFCF1;
-    font-weight: 500;
-    pointer-events: none;
-    transform: translate(-50%, -50%);       
-    z-index: 1;
-    
 }

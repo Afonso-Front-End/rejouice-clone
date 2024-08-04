@@ -1,0 +1,80 @@
+.container-section-five {
+    padding: 4rem 3.4rem;
+}
+
+.container-section-five .content-section-five .div-blur {
+    width: 100%;
+    height: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container-section-five .content-section-five .div-blur .video-blur {
+    width: 70%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.container-section-five .content-section-five .div-blur .video-blur video {
+    width: 100%;
+}
+
+.container-section-five .content-section-five .div-blur .video-blur .loader {
+    position: absolute;
+    width: 55%;
+    height: 55%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-section-five .content-section-five .div-blur .video-blur .loader .circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.404);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.container-section-five .content-section-five .div-blur .video-blur .loader .circle .text {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.container-section-five .content-section-five .div-blur .video-blur .loader .circle .seats {
+    text-align: center;
+    font-family: "NBInternationalProBoo";
+    color: #fff;
+}
+
+.container-section-five .content-section-five .div-blur .video-blur .loader .circle .seats h1 {
+    font-size: 4vw;
+    font-weight: 500;
+}
+
+.container-section-five .content-section-five .div-blur .video-blur .loader .circle .seats p {
+    font-size: 1.7vw;
+    font-weight: 500;
+}
+
+.container-section-five .content-section-five .div-blur .video-blur .loader .dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}

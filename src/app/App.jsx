@@ -1,6 +1,8 @@
 import Header from "../components/header/Header";
 import Main from "../components/main/Main";
 import Footer from "../components/footer/Footer";
+import Cursor from "../components/cursor/Cursor";
+
 import "./app.css"
 import gsap from "gsap"
 import ScrollTrigger from "gsap-trial/ScrollTrigger"
@@ -18,31 +20,11 @@ const App = () => {
             smooth: 1,
             effects: true,
         })
-
-        const cursor = document.querySelector("#play-reel")
-        const headerVideo = document.querySelector(".header-video")
-        const seasonTwo = document.querySelector(".season-two")
-        gsap.fromTo(cursor,
-            {zIndex: 0, scale: 0,},
-            {zIndex: 1, delay: 3.5, scale: 1}
-        )
-        window.addEventListener("mousemove", (event) => {
-            gsap.to(cursor, {
-                x: event.x,
-                y: event.y,
-            })
-        })
-
-        return () => {
-            headerVideo.removeEventListener("mousemove", () => { });
-        }
-
     }, [])
-
 
     return (
         <div id="container" ref={containerRef}>
-            <div id="play-reel"><span>Play Reel</span></div>
+            <Cursor/>
             <div id="content">
                 <Header />
                 <Main />

@@ -1,0 +1,27 @@
+.container-section-one {
+    padding: 4rem 3.5rem;
+}
+
+.container-section-one .content-section-one .div-span-1 {
+    border-bottom: 1px solid #0000007c;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-section-one .content-section-one .div-span-1 span {
+    font-weight: 100;
+    font-size: 1.7vw;
+    font-family: "NBInternationalProBoo";
+    overflow: hidden;
+}
+
+.container-section-one .content-section-one .div-span-2 span {
+    font-size: 4.1vw;
+    font-family: "NBInternationalProBoo";
+    font-weight: 100;
+    overflow: hidden;
+    display: block;
+    line-height: 4.5vw;
+}

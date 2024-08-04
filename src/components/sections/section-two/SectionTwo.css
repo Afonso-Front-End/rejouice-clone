@@ -1,0 +1,59 @@
+.container-section-two {
+    padding: 4rem 3.5rem;
+}
+
+.container-section-two .content-section-two {
+    font-family: "NBInternationalProBoo";
+    width: 100%;
+    height: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-section-two .content-section-two .div-span-1 {
+    padding: 0.5rem;
+    gap: 10px;
+}
+
+.container-section-two .content-section-two .div-span-1 span p {
+    font-size: 1.2vw;
+    position: relative;
+    left: -5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+}
+
+.container-section-two .content-section-two .div-span-1 span p button {
+    background-color: #000000;
+    font-size: 0.8vw;
+    padding: 0.3vw 0.4vw;
+    border-radius: 30px;
+    color: #fff;
+    border: none;
+}
+
+.container-section-two .content-section-two .div-span-2 {
+    text-align: center;
+}
+
+.container-section-two .content-section-two .div-span-2 span h2 {
+    overflow: hidden;
+    display: block;
+}   
+
+.container-section-two .content-section-two .div-span-2 span  {
+    display: block;
+    overflow: hidden;
+}
+
+.container-section-two .content-section-two .div-span-2 span h2 a {
+    font-size: 4.1vw;
+    font-weight: 100;
+    color: #000000;
+    text-decoration: underline #000000 3px;
+    text-align: center;
+}

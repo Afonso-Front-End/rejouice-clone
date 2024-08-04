@@ -12,7 +12,7 @@ import logoCardOura from "./icon/logo-oura-card-2.svg"
 import logoCardMoxion from "./icon/logo-moxion-card-3.svg"
 import { useRef } from "react"
 
-
+import gsap from "gsap"
 const SectioTrhee = () => {
     const videoRef1 = useRef(null);
     const videoRef2 = useRef(null);
@@ -21,17 +21,14 @@ const SectioTrhee = () => {
     const handleMouseEnter = (video) => {
 
         if (video) {
-            video.current.play()
-            video.current.currentTime = 0
-
+            gsap.to(video, {
+                onStart: () => {
+                    video.current.play()
+                    video.current.currentTime = 0
+                }
+            })
         }
     };
-
-    const handleMouseLeave = () => {
-        videoRef1.current.pause()
-        videoRef2.current.pause()
-        videoRef3.current.pause()
-    }
 
     return (
         <div className="container-section-trhee">
@@ -45,23 +42,48 @@ const SectioTrhee = () => {
                     </div>
 
                     <div className="content-card-video">
-                        <div className="card-video-1 card-video" onMouseEnter={() => handleMouseEnter(videoRef1)} onMouseLeave={handleMouseLeave}>
-                            <video src={video1} loop muted ref={videoRef1}></video>
-                            <img src={video1Img} alt="" />
+                        <div className="card-video-1 card-video"
+                            onMouseEnter={() => handleMouseEnter(videoRef1)}>
+                            <video
+                                src={video1}
+                                loop
+                                muted
+                                ref={videoRef1}>
+                            </video>
+                            <img
+                                src={video1Img}
+                                alt="" />
                             <span>
                                 <img src={logoCardRivia} alt="" />
                             </span>
                         </div>
-                        <div className="card-video-2 card-video" onMouseEnter={() => handleMouseEnter(videoRef2)} onMouseLeave={handleMouseLeave}>
-                            <video src={video2} loop muted ref={videoRef2}></video>
-                            <img src={video2Img} alt="" />
+                        <div className="card-video-2 card-video"
+                            onMouseEnter={() => handleMouseEnter(videoRef2)}>
+                            <video
+                                src={video2}
+                                loop
+                                muted
+                                ref={videoRef2}
+                            >
+                            </video>
+                            <img
+                                src={video2Img}
+                                alt="" />
                             <span>
                                 <img src={logoCardOura} alt="" />
                             </span>
                         </div>
-                        <div className="card-video-3 card-video" onMouseEnter={() => handleMouseEnter(videoRef3)} onMouseLeave={handleMouseLeave}>
-                            <video src={video3} loop muted ref={videoRef3}></video>
-                            <img src={video3Img} alt="" />
+                        <div className="card-video-3 card-video"
+                            onMouseEnter={() => handleMouseEnter(videoRef3)}>
+                            <video src={video3}
+                                loop
+                                muted
+                                ref={videoRef3}
+                            >
+                            </video>
+                            <img
+                                src={video3Img}
+                                alt="" />
                             <span>
                                 <img src={logoCardMoxion} alt="" />
                             </span>

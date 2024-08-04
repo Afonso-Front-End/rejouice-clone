@@ -23,6 +23,7 @@
 
 .container-section-trhee .content-section-trhee .container-card-video .card-video {
     position: relative;
+    overflow: hidden;
 }
 
 .container-section-trhee .content-section-trhee .container-card-video .card-video img {

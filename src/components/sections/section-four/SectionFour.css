@@ -15,6 +15,10 @@
     font-size: 1.7vw;
     font-family: "NBInternationalProBoo";
     overflow: hidden;
+    display: block;
+}
+.container-section-four .content-section-four .div-span-1 span p{
+   display: block;
 }
 
 .container-section-four .content-section-four .div-span-2 span {

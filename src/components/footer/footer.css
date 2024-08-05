@@ -1,7 +1,7 @@
 .container-footer {
     width: 100%;
     height: 100%;
-    color: #FFF;
+    color: #FFFCF1;
 }
 
 .content-footer {
@@ -20,18 +20,25 @@ footer {
 }
 
 #footer-logo {
+    width: 100%;
     margin: 0 auto;
     padding: 3rem 0;
 }
 
 #footer-logo h1 {
+}
+
+#rejouice-f {
     font-family: "Rejouice-Headline";
+    font-weight: 100;
+    display: flex;
     font-size: 26.5vw;
     line-height: 16.1vw;
-    font-weight: 100;
-    color: #FFF;
     overflow: hidden;
-    width: 100%;
+    padding: 0rem 3.2rem;
+}
+#rejouice-f #r-f {
+    /* transform: rotate(-180deg); */
 }
 
 .footer-top {
@@ -58,7 +65,7 @@ footer {
 }
 
 .nav-text button {
-    padding: 1rem ;
+    padding: 1rem;
     border-radius: 30px;
     background-color: transparent;
     color: #FFF;

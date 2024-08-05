@@ -1,5 +1,48 @@
+import { useGSAP } from "@gsap/react"
 import "./footer.css"
+import gsap from "gsap"
+import ScrollTrigger from "gsap-trial/ScrollTrigger"
+import SplitText from "gsap-trial/SplitText"
+
+gsap.registerPlugin(ScrollTrigger, SplitText)
 const Footer = () => {
+
+    useGSAP(() => {
+        const contexto = gsap.context(() => {
+            const rejouice = new SplitText("#footer-logo h1", { type: "chars" })
+            const rejouiceChars = rejouice.chars
+
+            const rejouiceR = new SplitText("#r-f", { type: "chars" })
+            const rejouiceRChars = rejouiceR.chars
+
+            var timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".content-footer",
+                    start: "top 50%",
+                    end: "bottom bottom",
+                    scrub: 2,
+                }
+            });
+            
+            timeline.from(rejouiceChars, {
+                opacity: 0,
+                yPercent: -250,
+                duration: 2,
+                stagger: 0.05,
+                delay: -1.5
+            })
+            // timeline.from(rejouiceRChars, {
+            //     yPercent: 250,
+            //     duration: 1,
+            //     stagger: 0.05,
+            //     // delay: -1.25
+            // })
+        })
+        return () => {
+            contexto.revert()
+        };
+    }, []);
+
     return (
         <div className="container-footer">
             <div className="content-footer">
@@ -39,7 +82,16 @@ const Footer = () => {
                     </div>
 
                     <div id="footer-logo">
-                        <h1>rejouice</h1>
+                        <h1 id="rejouice-f">
+                            <span>r</span>
+                            <span>e</span>
+                            <span>r</span>
+                            <span>o</span>
+                            <span>u</span>
+                            <span>i</span>
+                            <span>c</span>
+                            <span>e</span>
+                        </h1>
                     </div>
                 </footer>
 

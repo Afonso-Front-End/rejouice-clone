@@ -19,9 +19,15 @@
     font-size: 1.2vw;
 }
 
-.container-section-about .content-section-about .about h2 {
+.container-section-about .content-section-about .about span h2 {
     font-size: 4vw;
     text-decoration: none;
+    overflow: hidden;
+    display: block;
+}
+.container-section-about .content-section-about .about span {
+    display: block;
+    overflow: hidden;
 }
 
 .container-section-about .content-section-about .about h2 a {

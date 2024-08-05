@@ -6,7 +6,30 @@ import image_slider_3 from "./image/d3289122-3f25-43f3-b140-11a342a484d7_Mask+gr
 import image_slider_4 from "./image/8059f4af-8ba3-4e5f-a14b-ba5ed760963f_Mask+group+(39).avif"
 import image_slider_5 from "./image/57ac2830-96e7-4174-a104-b384126bf98c_fec955552eb681ff6c273774515e6c2e.avif"
 
+import gsap from "gsap";
+import ScrollTrigger from "gsap/src/ScrollTrigger";
+import SplitText from "gsap-trial/SplitText";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react"
+gsap.registerPlugin(ScrollTrigger, SplitText)
+
 const SectionSeven = () => {
+    const sliderRef = useRef(null);
+
+
+    useGSAP(() => {
+        const images = sliderRef.current.querySelectorAll("img");
+
+        const totalWidth = Array.from(images).reduce((total, img) => total + img.offsetWidth, 0);
+        const clones = Array.from(images).map(img => img.cloneNode(true));
+
+        clones.forEach(clone => sliderRef.current.appendChild(clone));
+
+        gsap.timeline({ repeat: -1 })
+            .fromTo(sliderRef.current,
+                { x: 0 }, { x: -totalWidth, duration: 50, ease: "none" }
+            );
+    }, [])
     return (
         <div className="container-section-seven">
             <div className="content-section-seven">
@@ -17,7 +40,7 @@ const SectionSeven = () => {
                 </div>
 
                 <div className="container-slider-image">
-                    <div className="content-slider-image">
+                    <div className="content-slider-image" ref={sliderRef}>
                         <img src={image_slider_1} alt="" />
                         <img src={image_slider_2} alt="" />
                         <img src={image_slider_3} alt="" />

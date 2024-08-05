@@ -19,6 +19,7 @@ const SectionFive = () => {
             const offset = circumference - percent / 100 * circumference;
             circle.style.strokeDashoffset = offset;
         }
+    
 
         gsap.to(circle, {
             duration: 2,
@@ -27,23 +28,21 @@ const SectionFive = () => {
                 trigger: ".content-section-five",
                 start: "top 60%",
                 end: "bottom bottom",
-                markers: true,
-                // scrub: 2
+                onEnter: () => {
+                    console.log("enter")
+                },
             }
         })
-        gsap.to(".pointer",{
+        gsap.to(".pointer", {
             rotate: "298deg",
             duration: 2,
             scrollTrigger: {
                 trigger: ".content-section-five",
                 start: "top 60%",
                 end: "bottom bottom",
-                markers: true,
             }
         })
-        return () => {
-
-        }
+        return () => { }
     }, [])
 
     return (

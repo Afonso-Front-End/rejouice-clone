@@ -3,29 +3,23 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import SplitText from "gsap-trial/SplitText";
 import { useGSAP } from "@gsap/react";
+import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const SectionFour = () => {
 
     useGSAP(() => {
         const contexto = gsap.context(() => {
-            const animacaoComum = (classe, yValor) => {
-                return {
-                    y: yValor,
-                    duration: 0.05,
-                    stagger: 0.0,
-                    scrollTrigger: {
-                        trigger: classe,
-                        start: "top 105%",
-                        end: "bottom 100%",
-                        scrub: 1.7,
-                    }
-                };
-            };
-
-            const timeline = gsap.timeline();
-            timeline.from(".content-section-four .div-span-1 span p", animacaoComum(".content-section-four .div-span-1 span p", 120));
-            timeline.from(".content-section-four .div-span-2 span p", animacaoComum(".content-section-four .div-span-2 span p", 150));
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".content-section-four",
+                    start: "top 105%",
+                    end: "bottom 145%",
+                    scrub: 2,
+                }
+            });
+            timeline.fromTo(".content-section-four .div-span-1 span p", { y: 200, }, { y: 0, duration: 2, stagger: 0 })
+            timeline.fromTo(".content-section-four .div-span-2 span p", { y: 150, }, { y: 0, duration: 2, stagger: 0 })
         });
 
         return () => {
@@ -38,8 +32,12 @@ const SectionFour = () => {
             <div className="content-section-four">
                 <div className="div-span-1">
                     <span>
-                        <p>We operate on a simple philospphy:</p>
-                        <p>Quality over quantfy.</p>
+                        <p>
+                            We operate on a simple philospphy:
+                        </p>
+                    </span>
+                    <span>
+                        <p>  Quality over quantfy.</p>
                     </span>
                 </div>
                 <div className="div-span-2">

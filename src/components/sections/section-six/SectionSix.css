@@ -5,9 +5,6 @@
 .container-section-six .content-section-six .div-span-1 {
     border-bottom: 1px solid #0000007c;
     padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .container-section-six .content-section-six .div-span-1 span {
@@ -15,6 +12,11 @@
     font-size: 1.7vw;
     font-family: "NBInternationalProBoo";
     overflow: hidden;
+    display: block;
+}
+.container-section-six .content-section-six .div-span-1 span p {
+    display: block;
+    margin-top: 5px;
 }
 
 .container-section-six .content-section-six .div-span-2 span {
@@ -22,5 +24,8 @@
     font-family: "NBInternationalProBoo";
     font-weight: 100;
     overflow: hidden;
+    display: block;
+}
+.container-section-six .content-section-six .div-span-2 span p {
     display: block;
 }

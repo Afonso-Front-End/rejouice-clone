@@ -5,9 +5,8 @@
 .container-section-four .content-section-four .div-span-1 {
     border-bottom: 1px solid #0000007c;
     padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    
+    /* justify-content: space-between; */
 }
 
 .container-section-four .content-section-four .div-span-1 span {
@@ -18,7 +17,8 @@
     display: block;
 }
 .container-section-four .content-section-four .div-span-1 span p{
-   display: block;
+    display: block;
+    margin-top: 5px;
 }
 
 .container-section-four .content-section-four .div-span-2 span {
@@ -27,4 +27,7 @@
     font-weight: 100;
     overflow: hidden;
     display: block;
+}
+.container-section-four .content-section-four .div-span-2 span p{
+   display: block;
 }

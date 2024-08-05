@@ -10,23 +10,16 @@ const SectionSix = () => {
 
     useGSAP(() => {
         const contexto = gsap.context(() => {
-            const animacaoComum = (classe, yValor) => {
-                return {
-                    y: yValor,
-                    duration: 0.05,
-                    stagger: 0.0,
-                    scrollTrigger: {
-                        trigger: classe,
-                        start: "top 105%",
-                        end: "bottom 100%",
-                        scrub: 1.7
-                    }
-                };
-            };
-
-            const timeline = gsap.timeline();
-            timeline.from(".content-section-six .div-span-1 span p", animacaoComum(".content-section-six .div-span-1 span", 120));
-            timeline.from(".content-section-six .div-span-2 span p", animacaoComum(".content-section-six .div-span-2 span", 150));
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".content-section-six",
+                    start: "top 105%",
+                    end: "bottom 135%",
+                    scrub: 1.7,
+                }
+            });
+            timeline.fromTo(".content-section-six .div-span-1 span p", { y: 200,}, { y: 0, duration: 0.05, stagger: 0 })
+            timeline.fromTo(".content-section-six .div-span-2 span p", { y: 150,}, { y: 0, duration: 0.05, stagger: 0 })
         });
 
         return () => {
@@ -42,6 +35,8 @@ const SectionSix = () => {
                         <p>
                             Strategy & emotion.
                         </p>
+                    </span>
+                    <span>
                         <p>
                             you need both.
                         </p>

@@ -11,6 +11,11 @@ import { useRef } from "react";
 import { useLayoutEffect } from "react";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
+gsap.config({
+    autoSleep: 60, // Ajuste o tempo de espera conforme necessário
+    nullTargetWarn: false, // Desativa avisos sobre alvos nulos
+    trialWarn: false // Desativa avisos de versão de teste (somente se aplicável)
+});
 const App = () => {
     const containerRef = useRef(null)
     useLayoutEffect(() => {
@@ -24,11 +29,12 @@ const App = () => {
 
     return (
         <div id="container" ref={containerRef}>
-            <Cursor/>
+            {/* <Cursor/> */}
             <div id="content">
-                <Header />
-                <Main />
-                <Footer />
+                {/* <Header /> */}
+                {/* <Main /> */}
+                {/* <Footer /> */}
+                {/* <Cursor/> */}
             </div>
         </div>
     )

@@ -25,8 +25,20 @@ const SectionOne = () => {
             };
 
             const timeline = gsap.timeline();
-            timeline.from(".div-span-1 span p", animacaoComum(".div-span-1 span", 120));
-            timeline.from(".div-span-2 span p", animacaoComum(".div-span-2 span", 150));
+            timeline.from(".content-section-one .div-span-1 span p", animacaoComum(".content-section-one .div-span-1 span", 120));
+            timeline.from(".content-section-one .div-span-2 span p", animacaoComum(".content-section-one .div-span-2 span", 150));
+            
+            timeline.to(".content-section-one .div-span-1 span hr", {
+                width: "100%",
+                duration: 2,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".content-section-one .div-span-1 span hr",
+                    start: "top 100%",
+                    end: "bottom 100%",
+                    scrub: 5,
+                }
+            })
         });
 
         return () => {
@@ -41,6 +53,7 @@ const SectionOne = () => {
                 <div className="div-span-1">
                     <span>
                         <p>Tomorrow’s Brands, Today™</p>
+                        <hr />
                     </span>
                     <span>
                         <p>Paris / San Diego</p>

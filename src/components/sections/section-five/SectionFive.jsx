@@ -28,6 +28,7 @@ const SectionFive = () => {
                 trigger: ".content-section-five",
                 start: "top 60%",
                 end: "bottom bottom",
+                scrub: 1,
                 onEnter: () => {
                     console.log("enter")
                 },
@@ -40,6 +41,7 @@ const SectionFive = () => {
                 trigger: ".content-section-five",
                 start: "top 60%",
                 end: "bottom bottom",
+                scrub: 1,
             }
         })
         return () => { }

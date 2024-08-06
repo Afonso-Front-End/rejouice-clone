@@ -3,10 +3,8 @@
 }
 
 .container-section-four .content-section-four .div-span-1 {
-    border-bottom: 1px solid #0000007c;
     padding: 1rem 0;
-    
-    /* justify-content: space-between; */
+    position: relative;
 }
 
 .container-section-four .content-section-four .div-span-1 span {
@@ -16,6 +14,15 @@
     overflow: hidden;
     display: block;
 }
+
+.container-section-four .content-section-four .div-span-1 hr {
+    position: absolute;
+    width: 0%;
+    bottom: -0.2vw;
+    border: none;
+    border-bottom: 1px solid #0000007c;
+}
+
 .container-section-four .content-section-four .div-span-1 span p{
     display: block;
     margin-top: 5px;

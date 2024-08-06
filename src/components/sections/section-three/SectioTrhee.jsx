@@ -30,8 +30,13 @@ const SectioTrhee = () => {
         }
     };
 
+    const clickCard = (index) => {
+        console.log(index)
+    }
+
     return (
         <div className="container-section-trhee">
+            {/* <div className="loader-card"></div> */}
             <div className="content-section-trhee">
 
                 <div className="container-card-video">
@@ -42,7 +47,7 @@ const SectioTrhee = () => {
                     </div>
 
                     <div className="content-card-video">
-                        <div className="card-video-1 card-video"
+                        <div className="card-video-1 card-video" onClick={() => clickCard(1)}
                             onMouseEnter={() => handleMouseEnter(videoRef1)}>
                             <video
                                 src={video1}
@@ -57,7 +62,7 @@ const SectioTrhee = () => {
                                 <img src={logoCardRivia} alt="" />
                             </span>
                         </div>
-                        <div className="card-video-2 card-video"
+                        <div className="card-video-2 card-video" onClick={() => clickCard(2)}
                             onMouseEnter={() => handleMouseEnter(videoRef2)}>
                             <video
                                 src={video2}
@@ -73,7 +78,7 @@ const SectioTrhee = () => {
                                 <img src={logoCardOura} alt="" />
                             </span>
                         </div>
-                        <div className="card-video-3 card-video"
+                        <div className="card-video-3 card-video" onClick={() => clickCard(3)}
                             onMouseEnter={() => handleMouseEnter(videoRef3)}>
                             <video src={video3}
                                 loop

@@ -24,6 +24,7 @@
 .container-section-trhee .content-section-trhee .container-card-video .card-video {
     position: relative;
     overflow: hidden;
+    cursor: grab;
 }
 
 .container-section-trhee .content-section-trhee .container-card-video .card-video img {
@@ -65,4 +66,12 @@
     /* z-index: -1 ; */
     overflow: hidden;
     transition: 300ms linear;
+}
+.loader-card {
+    /* width: 100%;
+    height: 100vh;
+    background-color: #0E0E0E;
+    position: fixed;
+    left: 0; */
+    /* z-index: 999; */
 }

@@ -20,6 +20,18 @@ const SectionFour = () => {
             });
             timeline.fromTo(".content-section-four .div-span-1 span p", { y: 200, }, { y: 0, duration: 2, stagger: 0 })
             timeline.fromTo(".content-section-four .div-span-2 span p", { y: 150, }, { y: 0, duration: 2, stagger: 0 })
+
+            timeline.to(".content-section-four .div-span-1 hr", {
+                width: "100%",
+                duration: 2,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".content-section-four .div-span-1",
+                    start: "top 100%",
+                    end: "bottom 100%",
+                    scrub: 5,
+                }
+            })
         });
 
         return () => {
@@ -39,6 +51,7 @@ const SectionFour = () => {
                     <span>
                         <p>  Quality over quantfy.</p>
                     </span>
+                    <hr />
                 </div>
                 <div className="div-span-2">
                     <span>

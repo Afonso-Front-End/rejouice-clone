@@ -10,6 +10,8 @@ import ScrollSmoother from "gsap-trial/ScrollSmoother"
 import { useRef } from "react";
 import { useLayoutEffect } from "react";
 
+import PageRivian from "../pages/page-rivian/Page-rivian";
+
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
 gsap.config({
     autoSleep: 60, // Ajuste o tempo de espera conforme necessário
@@ -31,10 +33,11 @@ const App = () => {
         <div id="container" ref={containerRef}>
             {/* <Cursor/> */}
             <div id="content">
-                {/* <Header /> */}
-                {/* <Main /> */}
-                {/* <Footer /> */}
-                {/* <Cursor/> */}
+                <Header />
+                <Main />
+                <Footer />
+                <Cursor/>
+               {/* <PageRivian/> */}
             </div>
         </div>
     )

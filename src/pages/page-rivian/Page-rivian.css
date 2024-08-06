@@ -1,0 +1,82 @@
+.container-rivian,
+.content-rivian {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper-rivian {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.wrapper-rivian-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.237);
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.wrapper-rivian img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: scale(2);
+}
+
+.wrapper-rivian-text {
+    color: #FAF8F3;
+    font-family: "NBInternationalProBoo";
+    position: absolute;
+    right: 6%;
+    bottom: 7%;
+    z-index: 3;
+}
+
+.wrapper-rivian-text span {
+    display: block;
+    overflow: hidden;
+}
+
+.wrapper-rivian-text p {
+    font-size: 4.5vw;
+    display: block;
+    text-transform: uppercase;
+}
+
+.visit-rivian {
+    display: flex;
+    justify-content: space-between;
+    font-family: "NBInternationalProBoo";
+    padding: 15vw 3vw;
+}
+
+.left-visit-rivian ul {
+    list-style: none;
+}
+
+.left-visit-rivian ul p {
+    padding-bottom: 2vw;
+}
+
+.left-visit-rivian ul {
+    font-size: 1.5vw;
+    color: #000000;
+}
+
+.right-visit-rivian{
+    color: #000000;
+    font-size:1.6vw;
+    padding: 0vw 10vw;
+}   
+
+.right-visit-rivian p{
+   margin-top: 10vw;
+}   

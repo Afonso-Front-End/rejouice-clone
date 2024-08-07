@@ -33,11 +33,11 @@ const App = () => {
         <div id="container" ref={containerRef}>
             {/* <Cursor/> */}
             <div id="content">
-                <Header />
-                <Main />
-                <Footer />
-                <Cursor/>
-               {/* <PageRivian/> */}
+                {/* <Header /> */}
+                {/* <Main /> */}
+                {/* <Footer /> */}
+                {/* <Cursor/> */}
+               <PageRivian/>    
             </div>
         </div>
     )

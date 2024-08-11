@@ -1,4 +1,6 @@
 import "./SectioTrhee.css"
+import { Link } from 'react-router-dom';
+
 import video1 from "./video/Website-homepage-Work-01_1.mp4"
 import video2 from "./video/Website-homepage-Work-02_1.mp4"
 import video3 from "./video/Website-homepage-Work-03_1.mp4"
@@ -30,10 +32,6 @@ const SectioTrhee = () => {
         }
     };
 
-    const clickCard = (index) => {
-        console.log(index)
-    }
-
     return (
         <div className="container-section-trhee">
             {/* <div className="loader-card"></div> */}
@@ -47,22 +45,26 @@ const SectioTrhee = () => {
                     </div>
 
                     <div className="content-card-video">
-                        <div className="card-video-1 card-video" onClick={() => clickCard(1)}
-                            onMouseEnter={() => handleMouseEnter(videoRef1)}>
-                            <video
-                                src={video1}
-                                loop
-                                muted
-                                ref={videoRef1}>
-                            </video>
-                            <img
-                                src={video1Img}
-                                alt="" />
-                            <span>
-                                <img src={logoCardRivia} alt="" />
-                            </span>
-                        </div>
-                        <div className="card-video-2 card-video" onClick={() => clickCard(2)}
+                        <Link to="/rivian">
+
+                            <div className="card-video-1 card-video"
+                                onMouseEnter={() => handleMouseEnter(videoRef1)}>
+                                <video
+                                    src={video1}
+                                    loop
+                                    muted
+                                    ref={videoRef1}>
+                                </video>
+                                <img
+                                    src={video1Img}
+                                    alt="" />
+                                <span>
+                                    <img src={logoCardRivia} alt="" />
+                                </span>
+                            </div>
+
+                        </Link>
+                        <div className="card-video-2 card-video"
                             onMouseEnter={() => handleMouseEnter(videoRef2)}>
                             <video
                                 src={video2}
@@ -78,7 +80,7 @@ const SectioTrhee = () => {
                                 <img src={logoCardOura} alt="" />
                             </span>
                         </div>
-                        <div className="card-video-3 card-video" onClick={() => clickCard(3)}
+                        <div className="card-video-3 card-video"
                             onMouseEnter={() => handleMouseEnter(videoRef3)}>
                             <video src={video3}
                                 loop
@@ -95,7 +97,7 @@ const SectioTrhee = () => {
                         </div>
                     </div>
                 </div>
-
+                
             </div>
         </div>
     )

@@ -1,7 +1,6 @@
-import Header from "../components/header/Header";
-import Main from "../components/main/Main";
-import Footer from "../components/footer/Footer";
+
 import Cursor from "../components/cursor/Cursor";
+
 
 import "./app.css"
 import gsap from "gsap"
@@ -11,6 +10,9 @@ import { useRef } from "react";
 import { useLayoutEffect } from "react";
 
 import PageRivian from "../pages/page-rivian/Page-rivian";
+
+import { Routes, BrowserRouter, Route } from "react-router-dom"
+import Home from "../pages/home/Home";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
 gsap.config({
@@ -27,19 +29,23 @@ const App = () => {
             smooth: 1,
             effects: true,
         })
+
+        setTimeout(() => {
+            smoother.scrollTo(0, 0);
+        }, 100);
     }, [])
 
     return (
-        <div id="container" ref={containerRef}>
-            {/* <Cursor/> */}
-            <div id="content">
-                {/* <Header /> */}
-                {/* <Main /> */}
-                {/* <Footer /> */}
-                {/* <Cursor/> */}
-               <PageRivian/>    
+        <BrowserRouter>
+            <div id="container" ref={containerRef}>
+                <div id="content">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/rivian" element={<PageRivian />} />
+                    </Routes>
+                </div>
             </div>
-        </div>
+        </BrowserRouter>
     )
 }
 

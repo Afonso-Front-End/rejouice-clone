@@ -8,8 +8,9 @@ gsap.registerPlugin(ScrollTrigger, SplitText)
 import Menu from "../../components/menu/Menu";
 import Footer from "../../components/footer/Footer";
 import wrapper from "./image/9b79ca3d-8175-43c6-88e9-f2734a8d3650_rivian.avif"
-
+import ScrollTop from "../../scrolTop/ScrollTop";
 const PageRivian = () => {
+    window.scrollTo(0,0)
 
     useGSAP(() => {
         const contexto = gsap.context(() => {
@@ -19,7 +20,6 @@ const PageRivian = () => {
                     start: "top top",
                     end: "bottom bottom",
                     scrub: 1.7,
-                    markers: true
                 }
             });
             gsap.fromTo(".wrapper-rivian-text span p", { y: 150, }, { y: 0, duration: 1, stagger: 0.05 })
@@ -34,7 +34,7 @@ const PageRivian = () => {
     return (
         <div className="container-rivian">
             <div className="content-rivian">
-                <Menu/>
+                <Menu />
                 <div className="wrapper-rivian">
                     <div className="wrapper-rivian-img"></div>
                     {/* https://cdn.arstechnica.net/wp-content/uploads/2022/07/2023-Rivian-R1S-2.jpg */}
@@ -76,8 +76,13 @@ const PageRivian = () => {
                         <p>→ Visit Rivian's website</p>
                     </div>
                 </section>
-                <Footer/>
+
+                <div className="show-image">
+
+                </div>
+
             </div>
+            {/* <Footer /> */}
         </div>
     )
 }
